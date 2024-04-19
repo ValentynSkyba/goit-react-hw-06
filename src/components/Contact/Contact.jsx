@@ -1,21 +1,11 @@
 import { IoIosBody, IoIosCall } from "react-icons/io";
 import s from "./Contact.module.css";
-const Contact = ({ item, onDelete }) => {
-  const { id, name, number } = item;
+const Contact = ({ contact, handleDelete }) => {
   return (
     <li className={s.item}>
-      <h3>
-        {" "}
-        <IoIosBody className={s.icon} />
-        {name}
-      </h3>
-      <p>
-        <IoIosCall className={s.icon} />
-        {number}
-      </p>
-      <button onClick={() => onDelete(id)} type="button" className={s.btn}>
-        Delete
-      </button>
+      <h3>Name: {contact.name}</h3>
+      <p>Tel: {contact.number}</p>
+      <button onClick={() => handleDelete(contact.id)}>Delete</button>
     </li>
   );
 };
