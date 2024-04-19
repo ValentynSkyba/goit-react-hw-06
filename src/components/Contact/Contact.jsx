@@ -1,4 +1,3 @@
-import { IoIosBody, IoIosCall } from "react-icons/io";
 import s from "./Contact.module.css";
 const Contact = ({ contact, handleDelete }) => {
   return (
